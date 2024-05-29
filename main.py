@@ -22,9 +22,15 @@ for position in start_position:
 game_on = True
 while game_on:
     screen.update()
-    for snake_body in starting_snake_body:
-        snake_body.forward(20)
-        time.sleep(.1)
+    time.sleep(.1)
+    for snake_body in range(len(starting_snake_body) -1, 0, -1):
+        # Link the last 2 snake segment and reserve the head for[0]
+        new_x = starting_snake_body[snake_body-1].xcor()
+        new_y = starting_snake_body[snake_body-1].ycor()
+        starting_snake_body[snake_body].goto(new_x, new_y)
+    starting_snake_body[0].forward(20)
+
+
 
 
 screen.exitonclick()
