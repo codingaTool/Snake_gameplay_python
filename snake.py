@@ -26,3 +26,17 @@ class Snake:
             new_y = self.starting_snake_body[snake_body - 1].ycor()
             self.starting_snake_body[snake_body].goto(new_x, new_y)
         self.starting_snake_body[0].forward(MOVEMENT_PACE)
+
+    def up_control(self):
+        self.starting_snake_body[0].setheading(90)
+
+    def right_control(self):
+        self.starting_snake_body[0].setheading(0)
+
+    def down_control(self):
+        self.starting_snake_body[0].setheading(270)
+
+    def left_control(self):
+        self.starting_snake_body[0].setheading(180)
+
+
