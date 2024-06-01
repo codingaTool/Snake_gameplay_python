@@ -3,6 +3,10 @@ from turtle import Turtle
 # create list of co-ordinates for using tuples
 START_POSITION = [(0, 0), (-20, 0), (-40, 0)]
 MOVEMENT_PACE = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
 
 class Snake:
@@ -28,15 +32,20 @@ class Snake:
         self.starting_snake_body[0].forward(MOVEMENT_PACE)
 
     def up_control(self):
-        self.starting_snake_body[0].setheading(90)
+        if self.starting_snake_body[0].heading() != DOWN: # If the snake head is going Up, its not allowed to go down
+            self.starting_snake_body[0].setheading(UP)
 
     def right_control(self):
-        self.starting_snake_body[0].setheading(0)
+        if self.starting_snake_body[0].heading() != LEFT:
+            self.starting_snake_body[0].setheading(RIGHT)
 
     def down_control(self):
-        self.starting_snake_body[0].setheading(270)
+        if self.starting_snake_body[0].heading() != UP:
+            self.starting_snake_body[0].setheading(DOWN)
 
     def left_control(self):
-        self.starting_snake_body[0].setheading(180)
+
+        if self.starting_snake_body[0].heading() != RIGHT:
+            self.starting_snake_body[0].setheading(LEFT)
 
 
