@@ -12,6 +12,8 @@ screen.listen()
 snake = Snake()
 food = Food()
 
+snake_head = snake.starting_snake_body[0]
+
 screen.onkey(snake.up_control, "Up")
 screen.onkey(snake.right_control, "Right")
 screen.onkey(snake.down_control, "Down")
@@ -22,8 +24,12 @@ game_on = True
 
 while game_on:
     screen.update()
-    time.sleep(.09)
+    time.sleep(.1)
     snake.movement()
+
+    if snake_head.distance(food) <20:
+        food.refresh_food()
+
 
 
 
