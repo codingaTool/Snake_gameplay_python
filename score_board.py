@@ -16,7 +16,7 @@ class Scoreboard(Turtle):
 
     def game_over(self):
         self.color("red")
-        self.goto(x=0, y=0)
+        self.goto(x=0, y=200)
         self.write(f"GAME OVER...Try Again", align= "center", font=("courier", 24, "normal"))
 
     def increase_score(self):
