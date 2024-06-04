@@ -16,11 +16,8 @@ snake = Snake()
 food = Food()
 score = Scoreboard()
 
-
 snake_head = snake.starting_snake_body[0]
 snake_body = snake.starting_snake_body
-
-
 
 screen.onkey(snake.up_control, "Up")
 screen.onkey(snake.right_control, "Right")
@@ -52,15 +49,5 @@ while game_on:
         if snake_head.distance(segments) < 10:
             score.game_over()
             game_on = False
-
-
-
-
-
-
-
-
-
-
 
 screen.exitonclick()

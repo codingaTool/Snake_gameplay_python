@@ -53,5 +53,3 @@ class Snake:
 
         if self.starting_snake_body[0].heading() != RIGHT:
             self.starting_snake_body[0].setheading(LEFT)
-
-

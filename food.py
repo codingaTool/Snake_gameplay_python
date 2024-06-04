@@ -17,8 +17,4 @@ class Food(Turtle):
         RANDOM_XCORD = random.randint(-270, 270)
         RANDOM_YCORD = random.randint(-270, 270)
         self.goto(x=RANDOM_XCORD,y=RANDOM_YCORD)
-        print("nom nom")
 
-
-# print(RANDOM_XCORD)
-# print(RANDOM_YCORD)
